@@ -1,0 +1,14 @@
+{
+  "name": "@smokeball-dev/javascript-developer-test",
+  "version": "2.0.1",
+  "description": "",
+  "main": "./index.js",
+  "author": "Smokeball Development Team",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "25.1.0"
+  }
+}
