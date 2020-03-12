@@ -3,12 +3,12 @@
 const urlPrefix = `http://www.smokeballdev.com`;
 
 const urlToResponseLookup = {
-  [`${urlPrefix}/url1`]: 'Get to the chopper',
-  [`${urlPrefix}/url2`]: 'MY NAME IS NOT QUAID',
-  [`${urlPrefix}/url3`]: `What's wrong with Wolfie?`,
+  [`${urlPrefix}/arnie0`]: 'Get to the chopper',
+  [`${urlPrefix}/arnie1`]: 'MY NAME IS NOT QUAID',
+  [`${urlPrefix}/arnie2`]: `What's wrong with Wolfie?`,
 };
 
-const slowHttpRequestMockP = (url) => new Promise((resolve, reject) => {
+const httpRequestMockP = (url) => new Promise((resolve, reject) => {
   setTimeout(() => {
     const responseData = urlToResponseLookup[url];
     if (responseData) {
@@ -19,9 +19,9 @@ const slowHttpRequestMockP = (url) => new Promise((resolve, reject) => {
   }, 200);
 });
 
-const getUrlP = async (url) => {
+const httpGet = async (url) => {
   try {
-    const message = await slowHttpRequestMockP(url);
+    const message = await httpRequestMockP(url);
     return { status: 200, body: JSON.stringify({ message }) };
   } 
   catch (err) {
@@ -30,5 +30,5 @@ const getUrlP = async (url) => {
 };
 
 module.exports = {
-  getUrlP,
+  httpGet,
 };

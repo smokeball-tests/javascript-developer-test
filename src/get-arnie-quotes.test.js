@@ -1,21 +1,21 @@
-const { getUrls } = require('./get-urls');
+const { getArnieQuotes } = require('./get-arnie-quotes');
 
 const urls = [
-  'http://www.smokeballdev.com/url1',
-  'http://www.smokeballdev.com/url2',
-  'http://www.smokeballdev.com/url3',
-  'http://www.smokeballdev.com/url4',
+  'http://www.smokeballdev.com/arnie0',
+  'http://www.smokeballdev.com/arnie1',
+  'http://www.smokeballdev.com/arnie2',
+  'http://www.smokeballdev.com/arnie3',
 ];
 
 test('expect no throws', () => {
   expect.assertions(1);
-  expect(async () => results = await getUrls(urls)).not.toThrow(); 
+  expect(async () => results = await getArnieQuotes(urls)).not.toThrow(); 
 });
 
 test('responses to be correct', async () => {
   expect.assertions(5);
 
-  const results = await getUrls(urls);
+  const results = await getArnieQuotes(urls);
   
   expect(results.length).toBe(4);
 
@@ -29,7 +29,7 @@ test('code to be executed in less than 400ms', async () => {
   expect.assertions(2);
 
   const startTime = process.hrtime();
-  await getUrls(urls);
+  await getArnieQuotes(urls);
   const [ seconds, nanos ] = process.hrtime(startTime);
   
   expect(seconds).toBe(0);
