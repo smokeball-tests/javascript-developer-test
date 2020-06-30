@@ -21,7 +21,7 @@ The `getArnieQuotes()` function accepts an array of strings, with each string co
 
 The unit tests in `./src/get-arnie-quotes.test.js` will provide pre-defined URLs to the function and test your function's implementation. To run the unit tests, execute `npm test` in the terminal.
 
-The goal is to write an implementation of `getArnieQuotes` that passes all unit tests.
+The goal is to write an implementation of `getArnieQuotes()` that passes all unit tests.
 
 To pass the unit tests, `getArnieQuotes()` must perform the following each URL passed in;
 

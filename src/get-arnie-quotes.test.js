@@ -9,7 +9,7 @@ const urls = [
 
 test('expect no throws', () => {
   expect.assertions(1);
-  expect(async () => results = await getArnieQuotes(urls)).not.toThrow(); 
+  expect(async () => await getArnieQuotes(urls)).not.toThrow(); 
 });
 
 test('responses to be correct', async () => {
