@@ -21,25 +21,29 @@ The `getArnieQuotes()` function accepts an array of strings, with each string co
 
 The unit tests in `./src/get-arnie-quotes.test.js` will provide pre-defined URLs to the function and test your function's implementation. To run the unit tests, execute `npm test` in the terminal.
 
-The goal is to write an implementation of `getArnieQuotes()` that passes all unit tests.
+The goal is to write an implementation of `getArnieQuotes()` that meets all requirements and passes all unit tests.
+## Requirements
+`getArnieQuotes()` must perform the following on every passed in URL
 
-To pass the unit tests, `getArnieQuotes()` must perform the following on each passed URL
-
-1. Perform a HTTP GET on the URL
+1. Execute a HTTP GET
 2. If the HTTP status code of the response is 200, push an object to the results array with a single key `"Arnie Quote"` and the HTTP response body's `message` property as the key's associated value.
 3. If the HTTP status code of the response is not 200, push an object to the results array with a single key `"FAILURE"` and the HTTP response body's `message` property as the key's associated value.
 
-Finally, the `getArnieQuotes()` function must return a promise that resolves to the overall results array.
+Finally, the `getArnieQuotes()` function's return value must be a promise that resolves to the overall results array.
 
 Note that for this challenge, the HTTP calls are mocked. You *must* use the provided `httpGet` function to perform your HTTP requests.
 
 ## Tips
 * Only modify the `get-arnie-quotes.js` file.
 * You may introduce additional internal functions in `get-arnie-quotes.js`
-* Exploring all of the code files may provide you with useful hints.
+* Exploring all of the code files may provide you with useful hints. 
+* Not all of the requirements are covered by the unit tests.
 * We are most impressed with readable code that works.
 * Keep your solution as simple as possible, input validation for `get-arnie-quotes()` is not required.
-* Code as if your `get-arnie-quotes()` function may one day be used against a real http implementation.
+* Code as if your `get-arnie-quotes()` function may one day be used against a real http implementation. 
+* Other solutions to this puzzle may be available on github and may be used to give you ideas, however, not all forked solutions are correct. 
+* Direct plagiarism results in an immediate failure.
+
 
 ## Submission
 
