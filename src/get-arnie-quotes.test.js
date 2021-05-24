@@ -16,7 +16,7 @@ test('responses to be correct', async () => {
   expect.assertions(5);
 
   const results = await getArnieQuotes(urls);
-  
+
   expect(results.length).toBe(4);
 
   expect(results[0]).toEqual({ 'Arnie Quote': 'Get to the chopper' });
