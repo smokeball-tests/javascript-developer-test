@@ -40,8 +40,7 @@ Note that for this challenge, the HTTP calls are mocked. You *must* use the prov
 * Not all of the requirements are covered by the unit tests.
 * We are most impressed with readable code that works.
 * Keep your solution as simple as possible, input validation for `get-arnie-quotes()` is not required.
-* Code as if your `get-arnie-quotes()` function may one day be used against a real http implementation. 
-* Other solutions to this puzzle may be available on github and may be used to give you ideas, however, not all forked solutions are correct. 
+* Other solutions to this puzzle are available on github and can be used to give you ideas, however, not all forked solutions are correct. 
 * Direct plagiarism results in an immediate failure.
 
 
@@ -63,7 +62,7 @@ An example results array:
 
 [
   { 'Arnie Quote': 'Some cool quote' },
-  { 'FAILURE: 'Your request has been terminated' },
+  { 'FAILURE': 'Your request has been terminated' },
 ]
 ```
 
