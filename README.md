@@ -63,7 +63,7 @@ An example results array:
 
 [
   { 'Arnie Quote': 'Some cool quote' },
-  { 'FAILURE: 'Your request has been terminated' },
+  { 'FAILURE': 'Your request has been terminated' },
 ]
 ```
 
