@@ -1,8 +1,11 @@
 const { httpGet } = require("./mock-http-interface");
 
+const SUCCESS_KEY = `Arnie Quote`;
+const FAILURE_KEY = `FAILURE`;
+
 const parseResponses = (rawResponses) => {
   return rawResponses.map((resp) => {
-    const resKey = resp.status === 200 ? `Arnie Quote` : `FAILURE`;
+    const resKey = resp.status === 200 ? SUCCESS_KEY : FAILURE_KEY;
     const body = JSON.parse(resp.body);
     return { [resKey]: body.message };
   });
