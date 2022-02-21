@@ -7,16 +7,12 @@ const getArnieQuotes = async (urls) => {
     const message = JSON.parse(body).message;
 
     if (status === 200) {
-      pushObjectToArray({
-        array: results,
-        key: 'Arnie Quote',
-        value: message,
+      results.push({
+        'Arnie Quote': message,
       });
     } else {
-      pushObjectToArray({
-        array: results,
-        key: 'FAILURE',
-        value: message,
+      results.push({
+        FAILURE: message,
       });
     }
   };
@@ -29,12 +25,6 @@ const getArnieQuotes = async (urls) => {
 
   return results;
 };
-
-function pushObjectToArray({ array, key, value }) {
-  array.push({
-    [key]: value,
-  });
-}
 
 module.exports = {
   getArnieQuotes,
