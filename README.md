@@ -3,7 +3,7 @@
 ## System Requirements
 
 The coding challenge requires the following to be installed on your development machine;
-* [nodejs](https://nodejs.org/en/download/) version 10 or above.
+* [nodejs](https://nodejs.org/en/download/) version 18.14.0 or above (required for Jest 30).
 * A [git](https://git-scm.com/downloads) client.
 
 ## Installation
