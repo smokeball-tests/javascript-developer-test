@@ -35,3 +35,19 @@ test('code to be executed in less than 400ms', async () => {
   expect(seconds).toBe(0);
   expect(nanos / 1000 / 1000).toBeLessThan(400);
 });
+
+test('getArnieQuotes returns a promise', () => {
+  expect.assertions(1)
+
+  // We call the function to check the returned value is a promise instance before it resolves
+  const result = getArnieQuotes(urls);
+  expect(result).toBeInstanceOf(Promise);
+})
+
+test('returns an empty array when given an empty URL list', async () => {
+  expect.assertions(2)
+
+  const result = await getArnieQuotes([]);
+  expect(result).toBeInstanceOf(Array);
+  expect(result.length).toBe(0);
+})
